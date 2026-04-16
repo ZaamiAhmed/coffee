@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milgo Coffee | Crafting Perfection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="logo">MILGO<span>COFFEE</span><div class="logo-dot"></div></a>
+        <nav class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="menu.html">Shop Menu</a>
+            <a href="about.html#contact">Location</a>
+        </nav>
+        <div class="nav-right">
+            <a href="menu.html" class="btn btn-brand sm-btn">Order Now</a>
+            <button id="cart-toggle" aria-label="Open cart">🛒 <span id="cart-count">0</span></button>
+            <button class="mobile-menu-btn" aria-label="Toggle navigation">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay"></div>
+    <div class="cart-sidebar">
+        <div class="cart-header"><h3>Your Cart</h3><button id="close-cart">✕</button></div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-total-row"><span>Total:</span><span id="cart-total">$0.00</span></div>
+            <button class="btn btn-brand" id="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-container">
+                <div class="hero-text animate-on-scroll">
+                    <span class="hero-tag">Signature Selection</span>
+                    <h1>Crafting your<br>perfect cup.</h1>
+                    <p>Experience the finest coffee Nairobi has to offer. Precision roasting, masterfully poured.</p>
+                    <a href="menu.html" class="btn btn-brand">Shop the Menu</a>
+                </div>
+                <div class="hero-image animate-on-scroll">
+                    <div class="hero-bg-accent"></div>
+                    <img src="latte.png" alt="Milgo Coffee Drink">
+                </div>
+            </div>
+        </section>
+
+        <div class="container relative">
+            <div class="promo-banner animate-on-scroll">
+                <h2>Join the club for 10% off</h2>
+                <form onsubmit="event.preventDefault(); alert('Subscribed to Milgo Coffee!');">
+                    <input type="email" placeholder="Email Address" required>
+                    <button type="submit" class="btn btn-primary" style="padding: 0.8rem 1.5rem">→</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Milgo Coffee | Nairobi, Kilimani</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

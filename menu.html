@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Milgo Coffee</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="logo">MILGO<span>COFFEE</span><div class="logo-dot"></div></a>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="menu.html" class="active">Shop Menu</a>
+            <a href="about.html#contact">Location</a>
+        </nav>
+        <div class="nav-right">
+            <a href="menu.html" class="btn btn-brand sm-btn">Order Now</a>
+            <button id="cart-toggle" aria-label="Open cart">🛒 <span id="cart-count">0</span></button>
+            <button class="mobile-menu-btn" aria-label="Toggle navigation">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay"></div>
+    <div class="cart-sidebar">
+        <!-- Inside cart omitted for brevity, handled by JS -->
+        <div class="cart-header"><h3>Your Cart</h3><button id="close-cart">✕</button></div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-total-row"><span>Total:</span><span id="cart-total">$0.00</span></div>
+            <button class="btn btn-brand" id="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <main>
+        <!-- Adding background image onto page-header -->
+        <header class="page-header" style="background: linear-gradient(rgba(9, 9, 11, 0.6), rgba(9, 9, 11, 0.6)), url('menu_cappuccino.png') center/cover; padding-top: 10rem; padding-bottom: 6rem;">
+            <div class="container animate-on-scroll">
+                <h1>Our Menu</h1>
+                <p>Freshly brewed drinks and baked goods ready to order.</p>
+            </div>
+        </header>
+
+        <section class="menu-section">
+            <div class="container">
+                <div class="menu-categories animate-on-scroll">
+                    <button class="category-tab active" data-category="espresso">Espresso</button>
+                    <button class="category-tab" data-category="filter">Filter</button>
+                    <button class="category-tab" data-category="tea">Tea</button>
+                    <button class="category-tab" data-category="food">Food</button>
+                </div>
+                <div id="menu-grid" class="menu-grid animate-on-scroll"></div>
+            </div>
+        </section>
+    </main>
+    
+    <footer><div class="container"><p>&copy; 2026 Milgo Coffee | Nairobi, Kilimani</p></div></footer>
+    <script src="app.js"></script>
+</body>
+</html>
